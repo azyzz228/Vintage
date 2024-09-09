@@ -702,6 +702,7 @@ class ExitVisualMode(sublime_plugin.TextCommand):
             set_motion_mode(self.view, MOTION_MODE_NORMAL)
             self.view.run_command('shrink_selections')
 
+        self.view.erase_phantoms("search_result_index")
         self.view.run_command('unmark_undo_groups_for_gluing')
 
 class EnterVisualLineMode(sublime_plugin.TextCommand):
