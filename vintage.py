@@ -304,7 +304,7 @@ class SetMotion(sublime_plugin.TextCommand):
             if m != -1:
                 set_motion_mode(self.view, m)
             else:
-                print "invalid motion mode:", mode
+                print("invalid motion mode:", mode)
 
         eval_input(self.view)
 
@@ -348,7 +348,7 @@ class SetMotionMode(sublime_plugin.TextCommand):
             set_motion_mode(self.view, m)
             g_input_state.motion_mode_overridden = True
         else:
-            print "invalid motion mode"
+            print("invalid motion mode")
 
 class SetRegister(sublime_plugin.TextCommand):
     def run_(self, args):
